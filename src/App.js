@@ -1,9 +1,29 @@
-import "./App.css";
+import React from "react";
+import * as PIC from "./components/profile";
+import avatar from "./assets/avatar.png";
+import { Box } from "@chakra-ui/react";
 
-function App() {
+const PageWithCard = () => {
   return (
-      <h1 className="text-3xl font-bold text-red-300">Hello world!</h1>
-  );
-}
+    <>
+      <PIC.Card>
+        <PIC.Avatar img={avatar} />
+        <Box padding="10px">
+          <PIC.PersonalInfo
+            name="Samantha Brooke"
+            role="Creative Writer"
+            location="Ontario, Canada"
+            registerDate="July, 2021"
+          />
+          <PIC.Interests
+            entries={["Productivity", "Work", "Business", "Woman"]}
+          />
+        </Box>
 
-export default App;
+        <PIC.Buttons active={["Edit"]} />
+      </PIC.Card>
+    </>
+  );
+};
+
+export default PageWithCard;
