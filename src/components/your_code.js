@@ -56,10 +56,19 @@ export const PersonalInfo = ({ name, role, location, registerDate }) => {
 export const Interests = ({ entries }) => {
   return (
     <UnorderedList className="interests" ml="0" mt="5px">
-      <Text as="h2" fontSize="xl" fontWeight="bold">Interests</Text>
+      <Text as="h2" fontSize="xl" fontWeight="bold">
+        Interests
+      </Text>
       <Box display="flex">
         {entries.map((interest, index) => (
-          <ListItem margin="2px" backgroundColor="lightgray" padding="5px" borderRadius="3px" listStyleType="none" key={index}>
+          <ListItem
+            margin="2px"
+            backgroundColor="lightgray"
+            padding="5px"
+            borderRadius="3px"
+            listStyleType="none"
+            key={index}
+          >
             {interest}
           </ListItem>
         ))}

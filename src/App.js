@@ -1,5 +1,5 @@
 import React from "react";
-import * as PIC from "./components/profile";
+import * as PIC from "./components/your_code";
 import avatar from "./assets/avatar.png";
 import { Box } from "@chakra-ui/react";
 
